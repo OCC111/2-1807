@@ -1,6 +1,7 @@
 import pygame
+SCREEN_RECT = pygame.Rect(0, 0, 480, 700)
 
-class GameSprite(pygame,sprite.Sprite):
+class GameSprite(pygame.sprite.Sprite):
 	def __init__(self,imagename,speed=1):
 		super().__init__()
 		self.image = pygame.image.load(imagename)
@@ -18,5 +19,9 @@ class EnemySprite(GameSprite):
 
 	def update(self):
 		super().update()
+
+
+class BackGroundSprites(EnemySprite):
+	def __init__(self,imagename,):
 
 		
